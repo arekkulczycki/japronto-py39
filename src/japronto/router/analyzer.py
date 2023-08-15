@@ -45,7 +45,7 @@ def coroutine_to_func(f):
     # how-to-create-a-copy-of-a-python-function
     oc = f.__code__
     code = types.CodeType(
-        oc.co_argcount, oc.co_kwonlyargcount, oc.co_nlocals, oc.co_stacksize,
+        oc.co_argcount, oc.co_posonlyargcount, oc.co_kwonlyargcount, oc.co_nlocals, oc.co_stacksize,
         oc.co_flags & ~FLAG_COROUTINE,
         oc.co_code, oc.co_consts, oc.co_names, oc.co_varnames, oc.co_filename,
         oc.co_name, oc.co_firstlineno, oc.co_lnotab, oc.co_freevars,
